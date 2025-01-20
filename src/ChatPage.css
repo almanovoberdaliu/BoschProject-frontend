@@ -1,0 +1,52 @@
+/* Përdorim një dizajn fleksibël për faqe */
+.chat-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    /* Sigurojmë që faqja të mbulojë gjithë lartësinë */
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Ngjyrë e lehtë për sfondin */
+}
+
+/* Fusha e kërkimit (search bar) */
+.search-bar {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mesazhi kur nuk ka chat */
+.no-chats-message {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+/* Butoni "New Chat" në pjesën e poshtme të djathtë */
+.new-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.new-chat-btn:hover {
+    background-color: #0056b3;
+}

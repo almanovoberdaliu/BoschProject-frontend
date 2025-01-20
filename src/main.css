@@ -1,0 +1,607 @@
+/* Stili kryesor për aplikacionin */
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Karta e videos */
+.video-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 16px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Videoja */
+/* Videoja */
+.video-player {
+    max-width: 100%;
+    /* Siguron që videoja të përshtatet në gjerësinë e kartës */
+    height: auto;
+    /* Siguron që videoja ruan raportin e saj të aspektit */
+    border-radius: 8px;
+    /* Cepa të rrumbullakosur për përshtatje me kartën */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    /* Siguron që padding dhe border të jenë të përfshira */
+}
+
+
+/* Numri i shikimeve */
+.views {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+/* Aksionet e videos (likes dhe komente) */
+.video-actions {
+    width: 100%;
+}
+
+/* Seksioni i like */
+.like-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.like-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ff4d4d;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.2s;
+}
+
+.like-button:hover {
+    transform: scale(1.2);
+}
+
+.like-button:active {
+    transform: scale(1);
+}
+
+.like-section span {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Seksioni i komenteve */
+.comments-section {
+    margin-top: 10px;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.comment p {
+    margin: 0;
+    color: #333;
+    flex: 1;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: color 0.2s;
+}
+
+.delete-button:hover {
+    color: #e60000;
+}
+
+/* Forma e komenteve */
+.comment-form {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.comment-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Seksioni i komenteve */
+.comments-section {
+    margin-top: 10px;
+    width: 100%;
+    /* Siguro që merr gjithë gjerësinë */
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 100%;
+    /* Merr gjerësinë e prindit */
+    box-sizing: border-box;
+    /* Përfshin padding-in në përllogaritjen e gjerësisë */
+}
+
+.comment p {
+    margin: 0;
+    color: #333;
+    flex: 1;
+    /* Siguro që merr gjithë hapësirën e mundshme */
+    word-wrap: break-word;
+    /* Mbështill tekstin në rreshta të rinj nëse është shumë i gjatë */
+}
+
+p.video-actions {
+    display: flex;
+    justify-content: space-between;
+    /* Vendos hapësirë ndërmjet like dhe share */
+    align-items: center;
+    /* Rreshto në qendër vertikalisht */
+    margin-top: 10px;
+    width: 100%;
+    /* Siguro që merr gjithë gjerësinë */
+}
+
+.like-section,
+.share-section {
+    display: flex;
+    align-items: center;
+    /* Qendër vertikale për brendësinë */
+}
+
+.like-button,
+.share-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000000;
+    margin-right: 5px;
+    /* Hapësirë mes ikonës dhe numrit */
+    transition: color 0.2s;
+}
+
+.like-button:hover,
+.share-button:hover {
+    color: #0056b3;
+}
+
+
+.delete-button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 12px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.2s;
+}
+
+.delete-button:hover {
+    color: #e60000;
+}
+
+.comment-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+.comment-form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.comment-form button:hover {
+    background-color: #0056b3;
+}
+
+.share-section {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Vendos butonin në anën e djathtë */
+    padding-right: 10px;
+    /* Hapësirë nga e djathta e videos */
+}
+
+.share-button {
+    background: none;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    color: #000000;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.video-actions {
+    display: flex;
+    /* Rreshton elementet horizontalisht */
+    justify-content: space-between;
+    /* Vendos hapësirë mes like dhe share */
+    align-items: center;
+    /* Qendër vertikalisht */
+    padding: 0 10px;
+    /* Hapësirë horizontale në të dy anët */
+    margin-top: 10px;
+}
+
+.like-section,
+.share-section {
+    display: flex;
+    align-items: center;
+    /* Qendër vertikale për ikonat dhe tekstin */
+}
+
+.like-button,
+.share-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000000;
+    margin-right: 5px;
+    /* Hapësirë ndërmjet ikonës dhe numrit */
+    transition: color 0.2s;
+}
+
+.like-button:hover,
+.share-button:hover {
+    color: #000000;
+}
+
+.like-section span,
+.share-section span {
+    margin-left: 5px;
+    /* Hapësirë mes ikonës dhe numrit */
+}
+
+
+.share-button:hover {
+    background-color: #fbfbfb;
+    color: rgb(0, 0, 0);
+}
+
+.share-section span {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Overlay for modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Modal container */
+.share-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Header */
+.share-modal h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Share options */
+.share-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.share-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+}
+
+.share-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease;
+}
+
+.share-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Close button */
+.close-modal-button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.close-modal-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.send-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+/* Default light mode styles */
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .video-card {
+    background-color: #333;
+}
+
+.dark-mode .video-actions button {
+    background-color: #e0e0e0;
+    /* Butonat do mbeten të njëjtë */
+    color: black;
+    /* Butonat do mbeten të njëjtë */
+}
+
+.dark-mode .video-actions .like-button,
+.dark-mode .video-actions .share-button {
+    border: 1px solid #ccc;
+    /* Butonat do mbeten të njëjtë */
+}
+
+.dark-mode .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .share-modal {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode .comments-section {
+    background-color: #444;
+}
+
+.dark-mode .comment-form input {
+    background-color: #555;
+    color: white;
+    border: 1px solid #666;
+}
+
+.dark-mode .comment-form button {
+    background-color: #666;
+    color: white;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dark-mode-btn {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    /* Ngjyrë e errët për background */
+    color: #e0e0e0;
+    /* Tekst i bardhë për kontrast */
+}
+
+/* Karta e videos në Dark Mode */
+.dark-mode .video-card {
+    background-color: #333;
+    /* Ngjyrë më e errët për kartën e videos */
+    border: 1px solid #444;
+    /* Kufiri më i errët */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Hije më e butë */
+}
+
+/* Numri i shikimeve në Dark Mode */
+.dark-mode .views {
+    color: #bbb;
+    /* Tekst më të zbehtë për shikimet */
+}
+
+/* Aksionet e videos në Dark Mode (like dhe share) */
+.dark-mode .video-actions {
+    background-color: #222;
+    /* Background i errët për seksionin e aksioneve */
+}
+
+.dark-mode .like-button,
+.dark-mode .share-button {
+    color: #ff4d4d;
+    /* Ngjyrë e kuqe për butonat e like dhe share */
+    border: 1px solid #444;
+    /* Kufiri i errët */
+}
+
+/* Input për komente në Dark Mode */
+.dark-mode .comment-form input {
+    background-color: #555;
+    /* Ngjyrë e errët për inputet */
+    color: white;
+    /* Tekst i bardhë në input */
+    border: 1px solid #666;
+    /* Kufiri më i errët */
+}
+
+/* Butonat në Dark Mode */
+.dark-mode .comment-form button {
+    background-color: #666;
+    /* Ngjyrë më e errët për butonat */
+    color: white;
+    /* Tekst i bardhë për butonat */
+}
+
+.dark-mode .share-button {
+    background-color: #333;
+    /* Ngjyrë e errët për butonat e ndarjes */
+    color: white;
+    /* Tekst i bardhë për butonat */
+    border: 1px solid #444;
+    /* Kufiri më i errët për butonat */
+}
+
+/* Modal Overlay në Dark Mode */
+.dark-mode .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Më shumë errësim për overlay-in */
+}
+
+/* Modal në Dark Mode */
+.dark-mode .share-modal {
+    background-color: #444;
+    /* Ngjyrë e errët për modalin */
+    color: white;
+    /* Tekst i bardhë për modalin */
+}
+
+/* Teksti në Dark Mode */
+.dark-mode .comment-form input:focus {
+    border-color: #007bff;
+    /* Fokus me ngjyrë blu */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+    /* Hije blu për fokus */
+}
+
+/* Buton për mbyllje në Dark Mode */
+.dark-mode .close-modal-button {
+    background-color: #f44336;
+    /* Ngjyrë e kuqe për butonin e mbylljes */
+    color: white;
+    /* Tekst i bardhë */
+}
+
+/* Dark Mode buton për dark mode toggle */
+/* Dark Mode Toggle Button (Pozicionimi më poshtë) */
+/* Dark Mode Toggle Button (Pozicionimi dhe madhësia më e vogël) */
+.dark-mode-toggle {
+
+    /* Ngjyrë e errët për butonin */
+    color: white;
+    /* Tekst i bardhë */
+    border: none;
+    padding: 6px 12px;
+    /* Përdorim padding më të vogël */
+    cursor: pointer;
+    position: fixed;
+    /* Përdorim pozicion të fiksuar */
+    margin-top: 50px;
+    /* Vendos butonin 20px nga fundi */
+    right: 20px;
+    /* Vendos butonin 20px nga ana e djathtë */
+    /* Rrethuar butonin për një pamje më të lehtë */
+    z-index: 1000;
+    font-size: 18px;
+    /* Përdorim font më të vogël për tekstin */
+}
+
+/* Dark Mode Toggle Button Hover */
+.dark-mode-toggle:hover {
+    background-color: #676767;
+    /* Ngjyrë më e errët kur kalohet mbi të */
+}
+
+
+
+.dark-mode-btn {
+    width: 30px;
+    height: 30px;
+}
